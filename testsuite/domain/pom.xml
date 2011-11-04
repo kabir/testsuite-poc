@@ -28,15 +28,15 @@
 
     <parent>
         <groupId>org.jboss.as</groupId>
-        <artifactId>jboss-testsuite-poc-parent</artifactId>
+        <artifactId>jboss-testsuite-testsuite</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
     <groupId>org.jboss.as</groupId>
-    <artifactId>jboss-testsuite-testsuite</artifactId>
+    <artifactId>jboss-testsuite-domain</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-    <name>JBoss AS Testsuite Testsuite</name>
-    <packaging>pom</packaging>
+    <name>JBoss AS Testsuite Domain</name>
+
 
     <build>
         <plugins>
@@ -61,30 +61,4 @@
                 <scope>test</scope>
             </dependency>
     </dependencies>
-    
-    <profiles>
-       <profile>
-          <id>smoke-only</id>
-          <activation>
-            <activeByDefault>true</activeByDefault>
-          </activation>
-          <modules>
-             <module>integration</module>
-          </modules>
-       </profile>
-       <profile>
-          <id>allTests</id>
-          <activation>
-             <property>
-               <name>allTests</name>
-             </property>
-          </activation>
-          <modules>
-             <module>integration</module>
-             <module>spec</module>
-             <module>domain</module>
-          </modules>
-       </profile>
-    </profiles>
-    
 </project>
